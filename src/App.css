@@ -1,38 +1,256 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-bottom: 100px;
+  font-family: Roboto;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  background: #65d1d1;
+}
+
+.nav-right {
+  display: flex;
+  background: #65d1d1;
+  justify-content: right;
+}
+
+.link {
+  text-decoration: none;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  color: #060606;
+  font-size: 19px;
+  font-weight: 100;
+}
+.link:hover {
+  background: rgb(137, 225, 247);
+  border-radius: 10px;
+}
+
+#profile {
+  background: rgb(137, 225, 247);
+  border-radius: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 2%;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background: rgb(73, 73, 73);
+  color: white;
+  padding: 10px;
+}
+
+.signup {
+  margin: 50px 50px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.signup-input {
+  display: block;
+  padding: 12px;
+  width: 350px;
+  border-radius: 10px;
+  margin: 15px auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.signup-btn {
+  margin: 10px;
+  padding: 10px;
+  width: 80px;
+  border-radius: 10px;
+  border: none;
+  background: rgb(200, 200, 200);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 100;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login {
+  margin: 50px 50px;
+  text-align: center;
+}
+
+.login-input {
+  display: block;
+  padding: 12px;
+  width: 350px;
+  border-radius: 10px;
+  margin: 15px auto;
+}
+
+.login-btn {
+  margin: 10px;
+  padding: 10px;
+  width: 80px;
+  border-radius: 10px;
+  border: none;
+  background: rgb(200, 200, 200);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.logo {
+  width: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 2%;
+}
+
+.addProduct {
+  width: 500px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.product-input {
+  display: block;
+  padding: 12px;
+  width: 350px;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+.product-btn {
+  display: block;
+  margin: 15px auto;
+  padding: 10px;
+  width: 111px;
+  border-radius: 10px;
+  border: none;
+  background: rgb(200, 200, 200);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.errMsg {
+  color: red;
+  margin: 2px;
+  font-size: 15px;
+}
+
+.product-list {
+  text-align: center;
+  margin: 20px;
+}
+
+.product {
+  margin: 15px;
+  margin-top: 30px;
+}
+
+.product-list ul {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  list-style-type: none;
+  border: 1px solid grey;
+  width: 1050px;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.list {
+  width: 110px;
+  font-weight: 200;
+  margin: 10px;
+  padding: 25px;
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list1 {
+  font-weight: 700;
+}
+
+.deleteBtn {
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+  background: rgb(226, 65, 65);
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  color: #0a0a0a;
+  font-size: medium;
+}
+
+.updateLink {
+  text-decoration: none;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  color: #060606;
+  background: rgb(57, 180, 73);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.search {
+  width: 400px;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  margin-bottom: 34px;
+  padding: 12px;
+  background: rgb(187, 187, 187);
+  text-align: center;
+  font-size: 20px;
+}
+
+.noResult {
+  margin: 15px;
+}
+
+.modal {
+  /* display: none; Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  /* margin: 27% auto; */
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
