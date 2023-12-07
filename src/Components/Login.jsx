@@ -15,7 +15,7 @@ const Login = () => {
  })
 
   const login = async () => {
-    let data = await fetch("https://product-cart-backend.vercel.app/login", {
+    let data = await fetch("https://localhost:5000/login", {
       method: "post",
       body: JSON.stringify({ email, password }),
       headers: {

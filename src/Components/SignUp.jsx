@@ -18,7 +18,7 @@ const SignUp = () => {
      })
 
     const collectData = async()=>{
-       let data = await fetch("https://product-cart-backend.vercel.app/register",{
+       let data = await fetch("https://localhost:5000/register",{
             method:"Post",
             body: JSON.stringify({name,email,password}),
             headers:{
