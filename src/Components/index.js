@@ -7,3 +7,4 @@ export {default as AddProduct} from './AddProduct';
 export {default as ProductList} from './ProductList';
 export {default as UpdateProduct} from './UpdateProduct';
 export {default as Modal} from './Modal';
+export {default as ProfilePage} from './ProfilePage';

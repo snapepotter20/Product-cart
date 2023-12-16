@@ -1,7 +1,9 @@
-import React from "react";
+import React , {useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
+import ProfilePage from "./ProfilePage";
 
 const Nav = () => {
+
   const navigate = useNavigate();
   const auth = localStorage.getItem("user");
   const clearLocal = () => {
@@ -12,7 +14,7 @@ const Nav = () => {
     <>
       {auth ? (
         <div className="nav">
-           <img src="/Images/raybanlogo.png" alt="logo" className="logo"/>
+          <img src="/Images/raybanlogo.png" alt="logo" className="logo" />
           <Link to="/" className="link">
             Products
           </Link>
